@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Button = props => {
     const buttonStyle = {
@@ -20,4 +21,10 @@ const Button = props => {
     )
 }
 
+Button.defaultProps = {
+    widthBorder: false
+}
+Button.propTypes = {
+    textContent: PropTypes.string.isRequired
+}
 export default Button;
